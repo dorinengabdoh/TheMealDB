@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import Axios from 'axios';
 import Comment from '../commentComponent/comment';
+import Ingredient from '../ingredientComponent/Ingredient';
 
 
 const Details = () => {
@@ -98,6 +99,7 @@ const Details = () => {
         </div>
         < Video />
         <Comment />
+        <Ingredient />
       </div>
     </>
   )
