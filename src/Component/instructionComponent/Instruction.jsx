@@ -1,36 +1,43 @@
 import React from 'react'
 import { useQuery } from "react-query";
 import Axios from 'axios';
+import { useParams } from "react-router-dom";
 
 
 
 const Instruction = () => {
-  const API_URL = "https://www.themealdb.com/api/json/v1/1/categories.php";
+  const hello = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
   const { data } = useQuery({
-    queryKey: ["anyyy"],
+    queryKey: ["reci"],
     queryFn: async () => {
-      return await Axios.get(API_URL).then((res) => res.data);
+      return await Axios.get(hello).then((response) => response.data);
     },
   });
+  const params = useParams();
+
   console.log(data);
   return (
-      <>
+    <>
       <div className="instru">
         <h2 className="intrus">Instructions</h2>
         {data ? (
           <>
-            {data.meals.map((instruct) => (
-              <div className="intru">
-                <p className="circle">1</p>
-                <p> {instruct.strInstructions} </p>
-              </div>
-            ))}
+            {data.meals.map((instruct) => {
+              if (params.id == instruct.idMeal) {
+                return (
+                  <div className="intru">
+                    <p className="circle">1</p>
+                    <p> {instruct.strInstructions} </p>
+                  </div>
+                );
+              }
+            })}
           </>
         ) : (
           <div> No Data</div>
         )}
-        </div>
-      </>
-      )
+      </div>
+    </>
+  )
 }
-  export default Instruction
+export default Instruction
