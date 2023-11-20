@@ -14,7 +14,7 @@ const Details = () => {
   const params = useParams()
   console.log(params);
 
-  const hello = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${+params.id}&${params.strCategory}`;
+  const hello = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${+params.id}`;
   const { data, error } = useQuery({
     queryKey: ["reci"],
     queryFn: async () => {

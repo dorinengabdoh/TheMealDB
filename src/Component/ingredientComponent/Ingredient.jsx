@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 const Ingredient = () => {
   const params = useParams();
-  console.log(params.id);
+  console.log(params);
 
   const hello = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
   const { data } = useQuery({
@@ -21,7 +21,7 @@ const Ingredient = () => {
       <div className="ingre">
         <h2>Ingredients</h2>
         <p className="cake">For the crust</p> <br />
-        
+
         {data ? (
           <>
             {data.meals.map((ingre) => {
