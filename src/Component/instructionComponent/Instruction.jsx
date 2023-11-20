@@ -25,7 +25,6 @@ const Instruction = () => {
                 <p> {instruct.strInstructions} </p>
               </div>
             ))}
-
           </>
         ) : (
           <div> No Data</div>
@@ -34,5 +33,4 @@ const Instruction = () => {
       </>
       )
 }
-
   export default Instruction

@@ -6,6 +6,7 @@ import Axios from 'axios';
 import Comment from '../commentComponent/comment';
 import Ingredient from '../ingredientComponent/Ingredient';
 import Instruction from '../instructionComponent/Instruction';
+import Nutriment from '../nutrimentComponent/Nutriment';
 
 
 const Details = () => {
@@ -102,6 +103,9 @@ const Details = () => {
         <Comment />
         <Ingredient />
         <Instruction/>
+        <div class="all2">
+          <Nutriment/>
+        </div>
       </div>
     </>
   )
