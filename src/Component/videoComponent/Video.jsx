@@ -18,7 +18,6 @@ const Video = () => {
 
   const getVideoId = (meals) => {
     const meal = meals.find((meal) => meal.idMeal === params.id);
-
     return meal ? meal.strYoutube.split("v=").pop() : "";
   };
 

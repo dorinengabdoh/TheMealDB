@@ -17,130 +17,125 @@ const Ingredient = () => {
     },
   });
 
+
   return (
     <>
-
       <div class="ingre">
-        <h2>Ingredients</h2>
-        {data?(
-          <>
-            <p className="cake">For the crust</p>
-            {data.meals.map((ingre) => 
-                if (mealId == meal.idMeal) {
-                  mealCard.innerHTML = `
-                    <div class="ingredient-container">
-                    <div class="ingedients">
-                    <strong> 1 -</strong>
-                    <p class="gri">${meal.strMeasure1}</p>
-                    <p>${meal.strIngredient1}</p>
-                  </div>
-                  <div class="ingedients">
+      <h2>Ingredients</h2>
+      {data ? (
+        <>
+          <p className="cake">For the crust</p>
+          {data.meal.map((ingre) => 
+            {if (mealId == meal.idMeal) {
+              <div class="ingredient-container">
+                <div class="ingedients">
+                  <strong> 1 -</strong>
+                  <p class="gri">${ingre.strMeasure1}</p>
+                  <p>${ingre.strIngredient1}</p>
+                </div>
+                <div class="ingedients">
                   <strong>2 -</strong>
-                  <p class="gri">${meal.strMeasure2}</p>
-                    <p>${meal.strIngredient2}</p>
-                  </div>
-                  <div class="ingedients">
-                    <strong>3 -</strong>
-                    <p class="gri">${meal.strMeasure3}</p>
-                    <p>${meal.strIngredient3}</p>
-                  </div>
-                  <div class="ingedients">
-                    <strong>4 -</strong>
-                    <p class="gri">${meal.strMeasure4}</p>
-                    <p>${meal.strIngredient4}</p>
-                  </div>
-                  <div class="ingedients">
-                     <strong>5 -</strong>
-                    <p class="gri">${meal.strMeasure5}</p>
-                    <p>${meal.strIngredient5}</p>
-                  </div>
-                  <div class="ingedients">
-                    <strong>6 -</strong>
-                    <p class="gri">${meal.strMeasure6}</p>
-                    <p>${meal.strIngredient6}</p>
-                  </div>
-                  <div class="ingedients">
-                     <strong>7 -</strong>
-                    <p class="gri">${meal.strMeasure7}</p>
-                    <p>${meal.strIngredient7}</p>
-                  </div>
-                  <div class="ingedients">
-                    <strong>8 -</strong>
-                    <p class="gri">${meal.strMeasure8}</p>
-                    <p>${meal.strIngredient8}</p>
-                  </div>
-                  <div class="ingedients">
-                    <strong>9 -</strong>
-                    <p class="gri">${meal.strMeasure9}</p>
-                    <p>${meal.strIngredient9}</p>
-                  </div>
-                  <div class="ingedients">
-                    <strong>10 -</strong>
-                    <p class="gri">${meal.strMeasure10}</p>
-                    <p>${meal.strIngredient10}</p>
-                  </div>
-                  <div class="ingedients">
-                     <strong>11 -</strong>
-                    <p class="gri">${meal.strMeasure11}</p>
-                    <p>${meal.strIngredient11}</p>
-                  </div>
-                  <div class="ingedients">
-                     <strong>12 -</strong>
-                    <p class="gri">${meal.strMeasure12}</p>
-                    <p>${meal.strIngredient12}</p>
-                  </div>
-                  <div class="ingedients">
-                    <strong>13 -</strong>
-                    <p class="gri">${meal.strMeasure13}</p>
-                    <p>${meal.strIngredient13}</p>
-                  </div>
-                  <div class="ingedients">
-                    <strong>14 -</strong>
-                    <p class="gri">${meal.strMeasure14}</p>
-                    <p>${meal.strIngredient14}</p>
-                  </div>
-                  <div class="ingedients">
-                    <strong>15 -</strong>
-                    <p class="gri">${meal.strMeasure15}</p>
-                    <p>${meal.strIngredient15}</p>
-                  </div>
-                  <div class="ingedients">
-                    <strong>16 -</strong>
-                    <p class="gri">${meal.strMeasure16}</p>
-                    <p>${meal.strIngredient16}</p>
-                  </div>
-                  <div class="ingedients">
-                     <strong>17 -</strong>
-                    <p class="gri">${meal.strMeasure17}</p>
-                    <p>${meal.strIngredient17}</p>
-                  </div>
-                  <div class="ingedients">
-                   <strong>18 -</strong>
-                    <p class="gri">${meal.strMeasure18}</p>
-                    <p>${meal.strIngredient18}</p>
-                  </div>
-                  <div class="ingedients">
-                    <strong>19 -</strong>
-                    <p class="gri">${meal.strMeasure19}</p>
-                    <p>${meal.strIngredient19}</p>
-                  </div>
-                  <div class="ingedients">
-                    <strong>20 -</strong>
-                    <p class="gri">${meal.strMeasure20}</p>
-                    <p>${meal.strIngredient20}</p>
-                  </div>
-                    </div>
-                   
-                   
+                  <p class="gri">${ingre.strMeasure2}</p>
+                  <p>${ingre.strIngredient2}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>3 -</strong>
+                  <p class="gri">${ingre.strMeasure3}</p>
+                  <p>${ingre.strIngredient3}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>4 -</strong>
+                  <p class="gri">${ingre.strMeasure4}</p>
+                  <p>${ingre.strIngredient4}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>5 -</strong>
+                  <p class="gri">${ingre.strMeasure5}</p>
+                  <p>${ingre.strIngredient5}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>6 -</strong>
+                  <p class="gri">${ingre.strMeasure6}</p>
+                  <p>${ingre.strIngredient6}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>7 -</strong>
+                  <p class="gri">${ingre.strMeasure7}</p>
+                  <p>${ingre.strIngredient7}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>8 -</strong>
+                  <p class="gri">${ingre.strMeasure8}</p>
+                  <p>${ingre.strIngredient8}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>9 -</strong>
+                  <p class="gri">${ingre.strMeasure9}</p>
+                  <p>${ingre.strIngredient9}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>10 -</strong>
+                  <p class="gri">${ingre.strMeasure10}</p>
+                  <p>${ingre.strIngredient10}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>11 -</strong>
+                  <p class="gri">${ingre.strMeasure11}</p>
+                  <p>${ingre.strIngredient11}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>12 -</strong>
+                  <p class="gri">${ingre.strMeasure12}</p>
+                  <p>${ingre.strIngredient12}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>13 -</strong>
+                  <p class="gri">${ingre.strMeasure13}</p>
+                  <p>${ingre.strIngredient13}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>14 -</strong>
+                  <p class="gri">${ingre.strMeasure14}</p>
+                  <p>${ingre.strIngredient14}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>15 -</strong>
+                  <p class="gri">${ingre.strMeasure15}</p>
+                  <p>${ingre.strIngredient15}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>16 -</strong>
+                  <p class="gri">${ingre.strMeasure16}</p>
+                  <p>${ingre.strIngredient16}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>17 -</strong>
+                  <p class="gri">${ingre.strMeasure17}</p>
+                  <p>${ingre.strIngredient17}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>18 -</strong>
+                  <p class="gri">${ingre.strMeasure18}</p>
+                  <p>${ingre.strIngredient18}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>19 -</strong>
+                  <p class="gri">${ingre.strMeasure19}</p>
+                  <p>${ingre.strIngredient19}</p>
+                </div>
+                <div class="ingedients">
+                  <strong>20 -</strong>
+                  <p class="gri">${ingre.strMeasure20}</p>
+                  <p>${ingre.strIngredient20}</p>
+                </div>
+              </div>                   
+            }} 
             )}
-          </>
-
-        ) : (
-          <div>No Data</div>
-        )
-      }
-
-      </div>
+        </>
+      ) : (
+        <div>No Data</div>
+      )}
+      </div >
     </>
   )
 }
