@@ -5,6 +5,7 @@ import { useQuery } from 'react-query';
 import Axios from 'axios';
 import Comment from '../commentComponent/comment';
 import Ingredient from '../ingredientComponent/Ingredient';
+import Instruction from '../instructionComponent/Instruction';
 
 
 const Details = () => {
@@ -100,6 +101,7 @@ const Details = () => {
         < Video />
         <Comment />
         <Ingredient />
+        <Instruction/>
       </div>
     </>
   )
