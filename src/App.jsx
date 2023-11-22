@@ -7,10 +7,9 @@ import {createRoot} from "react-dom/client"
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import ErrorPage from './error-page'
 
+const client = new QueryClient();
 
 
-function App() {
-  const client = new QueryClient();
   const router = createBrowserRouter([
     {
       path: '/',
@@ -22,6 +21,11 @@ function App() {
       errorElement: <ErrorPage />
     }
   ])
+
+function App() {
+
+
+  
   return (
     <>
     <QueryClientProvider client={client}>

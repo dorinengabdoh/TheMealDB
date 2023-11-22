@@ -12,7 +12,9 @@ const Fouth = () => {
   const { data } = useQuery({
     queryKey: ["reci"],
     queryFn: async () => {
-      return await Axios.get(hello).then((response) => response.data);
+      const response = await fetch(hello)
+      const jsonResponse = await response.json()
+      return jsonResponse.data
     },
   });
   console.log(data);

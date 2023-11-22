@@ -3,9 +3,13 @@ import { useQuery } from "react-query";
 import Axios from "axios";
 import { useParams } from "react-router-dom";
 
+const getVideoId = (meals) => {
+  const meal = meals.find((meal) => meal.idMeal === params.id);
+  return meal ? meal.strYoutube.split("v=").pop() : "";
+};
+
 const Video = () => {
   const params = useParams();
-  const [videoId, setVideoId] = React.useState("");
   console.log(params.id);
 
   const hello = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
@@ -16,18 +20,7 @@ const Video = () => {
     },
   });
 
-  const getVideoId = (meals) => {
-    const meal = meals.find((meal) => meal.idMeal === params.id);
-    return meal ? meal.strYoutube.split("v=").pop() : "";
-  };
-
-  React.useEffect(() => {
-    if (data) {
-      const url = getVideoId(data?.meals || []);
-
-      setVideoId(url)
-    }
-  }, [data]);
+  const videoId = React.useMemo(() => getVideoId(data?.meals??[]), [data])
 
   return (
     <div class="video">
