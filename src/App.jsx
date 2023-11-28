@@ -30,7 +30,8 @@ function App() {
     <>
     <QueryClientProvider client={client}>
       <RouterProvider router={router} />
-    {/* <BrowserRouter>
+    {/* <BrowserRouter>const client = new QueryClient();
+
     <Routes>
         <Route path='/' element={<Fouth />}/>
         <Route path='/details' element={<Details />}/>

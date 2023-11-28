@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const Fouth = () => {
   const hello = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
-  const { data } = useQuery({
+  const {data} = useQuery({
     queryKey: ["reci"],
     queryFn: async () => {
       const response = await fetch(hello)
